@@ -1,0 +1,240 @@
+[
+  {
+    "file": "images/cover_corvette.jpg",
+    "category": "Fashion & Automotive",
+    "caption": "Studio-grade contrast \u2014 black mini dress against white Corvette C8",
+    "w": 2640,
+    "h": 2112
+  },
+  {
+    "file": "images/auto_bumper.jpg",
+    "category": "Fashion & Automotive",
+    "caption": "Editorial lifestyle, luxury-prop campaign look",
+    "w": 2640,
+    "h": 2112
+  },
+  {
+    "file": "images/beauty_01.jpg",
+    "category": "Beauty & Portrait",
+    "caption": "Clean beauty frame \u2014 strong jawline, platinum styling",
+    "w": 2400,
+    "h": 1920
+  },
+  {
+    "file": "images/beauty_02.jpg",
+    "category": "Beauty & Portrait",
+    "caption": "Natural-light beauty, commercial-ready expression",
+    "w": 2400,
+    "h": 1920
+  },
+  {
+    "file": "images/swim_green_driftwood.jpg",
+    "category": "Swim & Resort",
+    "caption": "Green bikini, driftwood \u2014 resort-brand editorial",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_green_grass.jpg",
+    "category": "Swim & Resort",
+    "caption": "Lakeside swim, natural light",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_green_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Green swim, riverbank posing range",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_polka.jpg",
+    "category": "Swim & Resort",
+    "caption": "Playful polka-dot swim, golden sand",
+    "w": 2400,
+    "h": 3001
+  },
+  {
+    "file": "images/swim_polka_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Blue polka-dot, classic beach stance",
+    "w": 2400,
+    "h": 3001
+  },
+  {
+    "file": "images/swim_polka_03.jpg",
+    "category": "Swim & Resort",
+    "caption": "Bright beachside, clean swimwear fit",
+    "w": 2400,
+    "h": 3001
+  },
+  {
+    "file": "images/swim_pink.jpg",
+    "category": "Swim & Resort",
+    "caption": "Dynamic beach kneel, warm tones",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_pink_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Pink swim, driftwood frame, genuine smile",
+    "w": 2314,
+    "h": 2892
+  },
+  {
+    "file": "images/swim_teal_tropical.jpg",
+    "category": "Swim & Resort",
+    "caption": "Teal one-piece, tropical deck",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_teal_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Lakeside teal, summer-brand energy",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_teal_03.jpg",
+    "category": "Swim & Resort",
+    "caption": "Teal swim, natural-light lifestyle",
+    "w": 1911,
+    "h": 2388
+  },
+  {
+    "file": "images/swim_blue_palm.jpg",
+    "category": "Swim & Resort",
+    "caption": "Silhouette & palm \u2014 campaign hero frame",
+    "w": 2227,
+    "h": 2784
+  },
+  {
+    "file": "images/swim_blue_seated.jpg",
+    "category": "Swim & Resort",
+    "caption": "Seated editorial, driftwood staging",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_blue_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Blue one-piece, beach editorial",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/swim_blue_03.jpg",
+    "category": "Swim & Resort",
+    "caption": "Crouched beach frame, strong lines",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/edit_red_01.jpg",
+    "category": "Editorial",
+    "caption": "Red lace, dramatic dune light \u2014 high-fashion edge",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/edit_red_02.jpg",
+    "category": "Editorial",
+    "caption": "Back study, texture-driven composition",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/edit_red_03.jpg",
+    "category": "Editorial",
+    "caption": "Red lace, silhouette against dune sky",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/edit_red_04.jpg",
+    "category": "Editorial",
+    "caption": "Moody driftwood lean, editorial mood",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/edit_black_forest.jpg",
+    "category": "Editorial",
+    "caption": "Black lace in forest \u2014 moody intimates editorial",
+    "w": 1440,
+    "h": 1798
+  },
+  {
+    "file": "images/edit_black_post.jpg",
+    "category": "Editorial",
+    "caption": "Texture contrast: skin, lace, timber",
+    "w": 1440,
+    "h": 1798
+  },
+  {
+    "file": "images/life_golden.jpg",
+    "category": "Lifestyle & Fashion",
+    "caption": "Golden-hour casual \u2014 denim & crop, brand-friendly",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/life_denim.jpg",
+    "category": "Lifestyle & Fashion",
+    "caption": "Americana casual, flared denim",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/life_denim_02.jpg",
+    "category": "Lifestyle & Fashion",
+    "caption": "White tank & denim, approachable energy",
+    "w": 2400,
+    "h": 3000
+  },
+  {
+    "file": "images/life_red_top.jpg",
+    "category": "Lifestyle & Fashion",
+    "caption": "Everyday-wear lifestyle, approachable energy",
+    "w": 1365,
+    "h": 1820
+  },
+  {
+    "file": "images/life_red_02.jpg",
+    "category": "Lifestyle & Fashion",
+    "caption": "Dockside casual, denim cutoffs",
+    "w": 1365,
+    "h": 1820
+  },
+  {
+    "file": "images/swim_stripe_01.jpg",
+    "category": "Swim & Resort",
+    "caption": "Striped swim, architectural porch",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/swim_stripe_02.jpg",
+    "category": "Swim & Resort",
+    "caption": "Confident stance, clean composition",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/swim_stripe_03.jpg",
+    "category": "Swim & Resort",
+    "caption": "Soft-light porch swim, editorial calm",
+    "w": 1440,
+    "h": 1800
+  },
+  {
+    "file": "images/swim_stripe_04.jpg",
+    "category": "Swim & Resort",
+    "caption": "Relaxed candid, lifestyle warmth",
+    "w": 1440,
+    "h": 1800
+  }
+]

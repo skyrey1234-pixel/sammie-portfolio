@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAMMIE — Comp Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17150f;--paper:#f6f2ea;--muted:#8a8372;--accent:#b98b52;--line:rgba(23,21,15,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#2a2824;font-family:'Inter',sans-serif;font-weight:300;display:flex;flex-direction:column;align-items:center;gap:26px;padding:34px 16px}
+.toolbar{display:flex;gap:12px;align-items:center}
+.toolbar a,.toolbar button{font-family:inherit;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  background:transparent;border:1px solid rgba(246,242,234,.3);color:#f6f2ea;padding:10px 20px;cursor:pointer;text-decoration:none;transition:.3s}
+.toolbar a:hover,.toolbar button:hover{background:#f6f2ea;color:#17150f}
+.card{width:850px;max-width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* FRONT */
+.front{position:relative;aspect-ratio:3/4;overflow:hidden}
+.front img{filter:grayscale(.08) contrast(1.04)}
+.front .grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(23,21,15,.86),transparent 40%),linear-gradient(to right,rgba(23,21,15,.5),transparent 35%)}
+.front .name{position:absolute;left:40px;bottom:34px;color:var(--paper)}
+.front .name .kick{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:#e6c89a;margin-bottom:8px}
+.front .name h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:92px;line-height:.9}
+.front .rep{position:absolute;right:38px;top:34px;text-align:right;color:var(--paper);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.9}
+
+/* BACK */
+.back{padding:46px 44px 40px}
+.back .topline{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:18px}
+.back .topline h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:44px;letter-spacing:.04em}
+.back .topline .ig{font-size:13px;letter-spacing:.2em;color:var(--accent)}
+.back .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}
+.back .thumbs .t{aspect-ratio:3/4;overflow:hidden;background:#e5e0d6}
+.back .info{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;margin-top:10px}
+.back .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.back .stats .row{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding-bottom:6px;font-size:13px}
+.back .stats .row .k{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+.back .stats .row .v{font-weight:500}
+.back .niche h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:10px}
+.back .niche ul{list-style:none;font-size:13px;color:#3a3628}
+.back .niche li{padding:5px 0;border-bottom:1px dotted var(--line);display:flex;gap:10px}
+.back .niche li span{color:var(--accent);font-size:11px;letter-spacing:.1em;text-transform:uppercase;min-width:66px}
+.back .foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.back .foot .brand{color:var(--accent)}
+@media print{body{background:#fff;padding:0;gap:0}.toolbar{display:none}.card{box-shadow:none;page-break-after:always;width:100%}}
+@media(max-width:700px){.front .name h1{font-size:60px}.back .info{grid-template-columns:1fr}.back .thumbs{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <a href="index.html">&larr; Portfolio</a>
+  <button onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- FRONT -->
+<div class="card">
+  <div class="front">
+    <img src="images/cover_corvette.jpg" alt="Sammie">
+    <div class="grad"></div>
+    <div class="rep">The Finnesse Group LLC<br>Management</div>
+    <div class="name">
+      <div class="kick">Swim · Resort · Editorial</div>
+      <h1 class="serif">Sammie</h1>
+    </div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="card">
+  <div class="back">
+    <div class="topline">
+      <h2 class="serif">Sammie</h2>
+      <div class="ig">@sammieeee_22 · 17.2K</div>
+    </div>
+
+    <div class="thumbs">
+      <div class="t"><img src="images/beauty_02.jpg"></div>
+      <div class="t"><img src="images/swim_green_driftwood.jpg"></div>
+      <div class="t"><img src="images/edit_black_forest.jpg"></div>
+      <div class="t"><img src="images/life_golden.jpg"></div>
+    </div>
+
+    <div class="info">
+      <div>
+        <div class="stats">
+          <div class="row"><span class="k">Hair</span><span class="v">Blonde</span></div>
+          <div class="row"><span class="k">Eyes</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Height</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Bust</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Waist</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Hips</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Dress</span><span class="v">TBC</span></div>
+          <div class="row"><span class="k">Shoe</span><span class="v">TBC</span></div>
+        </div>
+      </div>
+      <div class="niche">
+        <h3 class="serif">Best For</h3>
+        <ul>
+          <li><span>Primary</span>Swimwear &amp; resort campaigns</li>
+          <li><span>Strong</span>Summer lifestyle &amp; DTC apparel</li>
+          <li><span>Editorial</span>Intimates &amp; moody editorial</li>
+          <li><span>Promo</span>Automotive &amp; event ambassador</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>Booking · <span class="brand">The Finnesse Group LLC</span></div>
+      <div>Portfolio 2026</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAMMIE — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d; --bg2:#121216; --ink:#f4f1ec; --muted:#a7a29a;
+  --line:rgba(244,241,236,.14); --accent:#d9b382; --accent2:#e8d5bf;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  padding:18px 34px;background:linear-gradient(to bottom,rgba(11,11,13,.85),transparent);backdrop-filter:blur(6px)}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.42em;padding-left:.42em}
+nav .links{display:flex;gap:30px;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+nav a{color:var(--muted);text-decoration:none;transition:color .3s}
+nav a:hover{color:var(--accent)}
+@media(max-width:720px){nav .links{display:none}}
+
+/* HERO */
+.hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(11,11,13,.82) 0%,rgba(11,11,13,.3) 45%,rgba(11,11,13,.55) 100%),
+  linear-gradient(to top,rgba(11,11,13,.95),transparent 55%)}
+.hero .bg img{filter:grayscale(.1) contrast(1.05)}
+.hero .inner{position:relative;z-index:2;padding-bottom:9vh}
+.hero .kick{font-size:12px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(68px,15vw,210px);line-height:.86;letter-spacing:.02em}
+.hero .sub{margin-top:22px;max-width:440px;font-size:15px;color:var(--muted)}
+.hero .meta{margin-top:30px;display:flex;gap:40px;flex-wrap:wrap}
+.hero .meta div span{display:block}
+.hero .meta .n{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--accent2)}
+.hero .meta .l{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* SECTION HEADS */
+.sec{padding:110px 0}
+.sechead{display:flex;align-items:baseline;gap:18px;margin-bottom:50px}
+.sechead .num{font-size:12px;letter-spacing:.3em;color:var(--accent)}
+.sechead h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,6vw,62px);line-height:1}
+.sechead .rule{flex:1;height:1px;background:var(--line);margin-left:10px}
+
+/* ABOUT / NICHE */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:40px}}
+.about .lead{font-family:'Cormorant Garamond',serif;font-size:27px;line-height:1.45;font-weight:300;color:var(--accent2)}
+.about p{color:var(--muted);margin-top:20px;font-size:15px}
+.about .portrait{aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line)}
+.about .portrait img{filter:grayscale(.15)}
+
+/* NICHE TAGS */
+.niche{margin-top:46px}
+.niche-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.niche-grid .cell{background:var(--bg);padding:30px 26px;transition:background .4s}
+.niche-grid .cell:hover{background:var(--bg2)}
+.niche-grid .cell .ico{font-size:12px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase}
+.niche-grid .cell h3{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:400;margin:12px 0 8px}
+.niche-grid .cell p{font-size:13.5px;color:var(--muted)}
+
+/* REEL */
+.reel-sec{position:relative;padding:0;margin:40px 0}
+.reel-band{position:relative;overflow:hidden;background:#000}
+.reel-wrap{display:grid;grid-template-columns:auto 1fr;gap:0;align-items:stretch;max-width:1240px;margin:0 auto}
+@media(max-width:820px){.reel-wrap{grid-template-columns:1fr}}
+.reel-video{position:relative;background:#000;display:flex;align-items:center;justify-content:center}
+.reel-video video{display:block;width:auto;height:76vh;max-height:860px;max-width:100%;cursor:pointer}
+@media(max-width:820px){.reel-video video{height:auto;width:100%;max-height:none}}
+.reel-copy{display:flex;flex-direction:column;justify-content:center;padding:48px 50px;background:linear-gradient(135deg,var(--bg2),var(--bg))}
+.reel-copy .kick{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.reel-copy h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,6vw,74px);line-height:.95;margin-bottom:20px}
+.reel-copy p{color:var(--muted);font-size:15px;max-width:380px}
+.reel-copy .ctl{margin-top:28px;display:flex;gap:14px;align-items:center}
+.reel-copy .ctl button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:10px 20px;
+  font-family:inherit;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:.3s}
+.reel-copy .ctl button:hover{color:var(--ink);border-color:var(--accent)}
+.reel-copy .ctl button.fmt.active{background:var(--accent);border-color:var(--accent);color:#1a1205}
+.reel-tag{position:absolute;top:18px;left:18px;z-index:3;font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent);background:rgba(11,11,13,.55);backdrop-filter:blur(4px);padding:7px 14px;border:1px solid var(--line)}
+
+/* GALLERY */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{background:transparent;border:1px solid var(--line);color:var(--muted);
+  padding:9px 20px;font-family:inherit;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.filters button:hover{color:var(--ink);border-color:var(--muted)}
+.filters button.active{background:var(--accent);border-color:var(--accent);color:#1a1205}
+.grid{columns:3;column-gap:16px}
+@media(max-width:900px){.grid{columns:2}}
+@media(max-width:560px){.grid{columns:1}}
+.card{break-inside:avoid;margin-bottom:16px;position:relative;overflow:hidden;cursor:pointer;background:var(--bg2)}
+.card img{transition:transform .9s cubic-bezier(.2,.8,.2,1),filter .6s}
+.card:hover img{transform:scale(1.06)}
+.card .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 16px;opacity:0;transition:opacity .4s;
+  background:linear-gradient(to top,rgba(11,11,13,.9),transparent)}
+.card:hover .cap{opacity:1}
+.card .cap .c{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent)}
+.card .cap .t{font-family:'Cormorant Garamond',serif;font-size:17px;margin-top:3px}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,6,8,.96);display:none;align-items:center;justify-content:center;padding:30px}
+.lb.open{display:flex}
+.lb img{max-width:90vw;max-height:88vh;width:auto;height:auto;object-fit:contain}
+.lb .x{position:absolute;top:24px;right:30px;font-size:30px;color:var(--muted);cursor:pointer;font-weight:300}
+.lb .nav-btn{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;color:var(--muted);cursor:pointer;padding:20px;user-select:none}
+.lb .prev{left:10px}.lb .next{right:10px}
+
+/* SPECS */
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.specs .s{background:var(--bg);padding:28px 22px;text-align:center}
+.specs .s .v{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--accent2)}
+.specs .s .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* CONTACT */
+.contact{text-align:center;padding:130px 0 60px}
+.contact h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,8vw,86px);line-height:1}
+.contact .cta{margin-top:34px;display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.contact a.btn{border:1px solid var(--accent);color:var(--accent);text-decoration:none;padding:16px 34px;
+  font-size:12px;letter-spacing:.25em;text-transform:uppercase;transition:all .3s}
+.contact a.btn:hover{background:var(--accent);color:#1a1205}
+.contact a.btn.ghost{border-color:var(--line);color:var(--muted)}
+.contact a.btn.ghost:hover{color:var(--ink);border-color:var(--muted);background:transparent}
+footer{text-align:center;padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;letter-spacing:.15em}
+footer .credit{margin-top:8px;font-size:11px;opacity:.7}
+.disclaimer{max-width:760px;margin:30px auto 0;font-size:11px;color:rgba(167,162,154,.5);text-align:center;line-height:1.7}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">SAMMIE</div>
+  <div class="links">
+    <a href="#about">Profile</a>
+    <a href="#niche">Niche</a>
+    <a href="#reel">Reel</a>
+    <a href="#work">Portfolio</a>
+    <a href="#specs">Specs</a>
+    <a href="#contact">Booking</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg"><img src="images/swim_blue_palm.jpg" alt="Sammie"></div>
+  <div class="wrap inner">
+    <div class="kick">Swim · Resort · Editorial</div>
+    <h1 class="serif">Sammie</h1>
+    <p class="sub">A swim & lifestyle model with an editorial eye — tall, tattooed, and built for campaign work that sells sun, confidence, and brand.</p>
+    <div class="meta">
+      <div><span class="n">17.2K</span><span class="l">Following</span></div>
+      <div><span class="n">85+</span><span class="l">Published Sets</span></div>
+      <div><span class="n">NE&nbsp;FLA</span><span class="l">Based</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec wrap" id="about">
+  <div class="sechead"><span class="num">01</span><h2 class="serif">The Profile</h2><div class="rule"></div></div>
+  <div class="about">
+    <div>
+      <p class="lead">"She carries swimwear the way editorial models carry couture — long lines, clean angles, and a face that reads warm on camera."</p>
+      <p>Sammie is a swimwear and lifestyle model with a lean, athletic frame, platinum styling, and signature fine-line tattoos that give commercial work an editorial edge. Across 85+ published sets she's shown a consistent, professional command of posing — she knows her angles cold, moves cleanly through a shoot, and translates a wardrobe change into a genuine mood change.</p>
+      <p>Her strongest territory is sun-and-water brand storytelling: swim, resort, and beachside lifestyle that feels aspirational but reachable. Paired with her automotive and intimates sets, she reads as a model who can anchor a seasonal swim campaign and still deliver a moody editorial on the same card.</p>
+    </div>
+    <div class="portrait"><img src="images/beauty_01.jpg" alt="Sammie portrait"></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="niche">
+  <div class="sechead"><span class="num">02</span><h2 class="serif">Where She Wins</h2><div class="rule"></div></div>
+  <p style="max-width:620px;color:var(--muted);margin-top:-20px">Honest positioning based on her existing body of work — the lanes where she already converts, ranked by strength.</p>
+  <div class="niche niche-grid">
+    <div class="cell"><div class="ico">Primary</div><h3 class="serif">Swim &amp; Resort</h3><p>Her core lane. Carries one-pieces and bikinis with equal ease across teal, green, red, pink and polka cuts. Ideal for seasonal swim drops, resort-wear lookbooks, and beach-brand ambassador work.</p></div>
+    <div class="cell"><div class="ico">Strong</div><h3 class="serif">Lifestyle &amp; Fashion</h3><p>Denim, crop tops, golden-hour casual. Approachable "girl-next-door" energy that suits DTC apparel, sunglasses, beverage and summer-lifestyle brands.</p></div>
+    <div class="cell"><div class="ico">Editorial</div><h3 class="serif">Intimates &amp; Editorial</h3><p>Red and black lace sets in dune and forest settings prove she can carry moody, high-contrast editorial and boudoir/intimates with a fashion sensibility.</p></div>
+    <div class="cell"><div class="ico">Lifestyle Prop</div><h3 class="serif">Automotive &amp; Promo</h3><p>Her Corvette set shows she can anchor luxury-prop and promotional work — auto, events, and "lifestyle of" campaigns where a product shares the frame.</p></div>
+  </div>
+</section>
+
+<section class="reel-sec" id="reel">
+  <div class="reel-band">
+    <div class="reel-wrap">
+      <div class="reel-video">
+        <span class="reel-tag" id="reelTag">Motion Reel · 0:32 · ♪</span>
+        <video id="reelVid" src="sammie_reel.mp4" loop playsinline preload="metadata"></video>
+      </div>
+      <div class="reel-copy">
+        <div class="kick">In Motion</div>
+        <h2 class="serif">The Reel</h2>
+        <p>Thirty seconds of range — swim, resort, editorial and lifestyle cut together with cinematic motion and an original chill score. Built to stop the scroll and play on loop.</p>
+        <div class="ctl">
+          <button id="reelPlay">❚❚ Pause</button>
+          <button id="reelMute">🔊 Sound</button>
+          <button id="reelFs">⤢ Fullscreen</button>
+        </div>
+        <div class="ctl" style="margin-top:12px">
+          <button id="fmtVert" class="fmt active">▮ Vertical 9:16</button>
+          <button id="fmtSq" class="fmt">◼ Square 1:1</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="work">
+  <div class="sechead"><span class="num">03</span><h2 class="serif">Portfolio</h2><div class="rule"></div></div>
+  <div class="filters" id="filters">
+    <button class="active" data-f="all">All</button>
+    <button data-f="Swim &amp; Resort">Swim &amp; Resort</button>
+    <button data-f="Editorial">Editorial</button>
+    <button data-f="Lifestyle &amp; Fashion">Lifestyle</button>
+    <button data-f="Fashion &amp; Automotive">Automotive</button>
+    <button data-f="Beauty &amp; Portrait">Beauty</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="sec wrap" id="specs">
+  <div class="sechead"><span class="num">04</span><h2 class="serif">The Card</h2><div class="rule"></div></div>
+  <p style="max-width:620px;color:var(--muted);margin-top:-20px;margin-bottom:34px">Social reach and measurable stats. Physical measurements marked <em>TBC</em> — confirm with Sammie before sending to clients.</p>
+  <div class="specs">
+    <div class="s"><div class="v">17.2K</div><div class="k">IG Following</div></div>
+    <div class="s"><div class="v">85+</div><div class="k">Published Sets</div></div>
+    <div class="s"><div class="v">Blonde</div><div class="k">Hair</div></div>
+    <div class="s"><div class="v">TBC</div><div class="k">Height</div></div>
+    <div class="s"><div class="v">TBC</div><div class="k">Bust / Waist / Hip</div></div>
+    <div class="s"><div class="v">TBC</div><div class="k">Shoe / Dress</div></div>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <h2 class="serif">Let's create.</h2>
+  <div class="cta">
+    <a class="btn" href="https://www.instagram.com/sammieeee_22/" target="_blank" rel="noopener">@sammieeee_22</a>
+    <a class="btn ghost" href="comp-card.html">View Comp Card</a>
+  </div>
+  <p class="disclaimer">Represented by THE FINNESSE GROUP LLC. All photography © the respective photographers and used here for portfolio-presentation purposes. Set & beauty imagery credited in part to @vincentpierce (vincentpiercephoto). Measurements and booking terms to be confirmed directly.</p>
+</section>
+
+<footer>
+  SAMMIE · PORTFOLIO 2026
+  <div class="credit">Curated &amp; produced by THE FINNESSE GROUP LLC</div>
+</footer>
+
+<div class="lb" id="lb">
+  <span class="x" id="lbx">&times;</span>
+  <span class="nav-btn prev" id="lbprev">&#8249;</span>
+  <img id="lbimg" src="" alt="">
+  <span class="nav-btn next" id="lbnext">&#8250;</span>
+</div>
+
+<script>
+let GALLERY=[];
+let current=0, filtered=[];
+const grid=document.getElementById('grid');
+
+fetch('gallery.json').then(r=>r.json()).then(data=>{GALLERY=data;render('all');});
+
+/* REEL controls */
+(function(){
+  const v=document.getElementById('reelVid');
+  const pb=document.getElementById('reelPlay');
+  const mb=document.getElementById('reelMute');
+  const fs=document.getElementById('reelFs');
+  const fv=document.getElementById('fmtVert');
+  const fsq=document.getElementById('fmtSq');
+  const tag=document.getElementById('reelTag');
+  if(!v)return;
+  v.muted=true; // start muted so autoplay is allowed
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){v.play().catch(()=>{});} else {v.pause();} });
+  },{threshold:.4});
+  io.observe(v);
+  function sync(){pb.textContent = v.paused ? '▶ Play' : '❚❚ Pause';}
+  pb.onclick=()=>{ v.paused?v.play():v.pause(); sync(); };
+  v.addEventListener('play',sync); v.addEventListener('pause',sync);
+  v.onclick=()=>{ v.paused?v.play():v.pause(); sync(); };
+  mb.onclick=()=>{ v.muted=!v.muted; mb.textContent = v.muted ? '🔊 Sound' : '🔇 Mute'; if(v.muted===false) v.play().catch(()=>{}); };
+  fs.onclick=()=>{ if(v.requestFullscreen)v.requestFullscreen(); else if(v.webkitEnterFullscreen)v.webkitEnterFullscreen(); };
+  // format switch — preserve time & play state
+  function swap(src,tagText){
+    const tm=v.currentTime, wasPlaying=!v.paused, wasMuted=v.muted;
+    v.src=src; v.currentTime=tm; v.muted=wasMuted;
+    if(wasPlaying) v.play().catch(()=>{});
+    tag.textContent=tagText;
+  }
+  fv.onclick=()=>{ if(fv.classList.contains('active'))return; fv.classList.add('active'); fsq.classList.remove('active');
+    document.querySelector('.reel-video video').style.height='76vh'; swap('sammie_reel.mp4','Motion Reel · 0:32 · ♪'); };
+  fsq.onclick=()=>{ if(fsq.classList.contains('active'))return; fsq.classList.add('active'); fv.classList.remove('active');
+    document.querySelector('.reel-video video').style.height='70vh'; swap('sammie_reel_square.mp4','Feed Cut 1:1 · 0:32 · ♪'); };
+})();
+
+function render(f){
+  filtered = f==='all'?GALLERY:GALLERY.filter(g=>g.category===f.replace('&amp;','&'));
+  grid.innerHTML='';
+  filtered.forEach((g,i)=>{
+    const d=document.createElement('div');d.className='card';
+    d.innerHTML=`<img loading="lazy" src="${g.file}" alt="${g.caption}">
+      <div class="cap"><div class="c">${g.category}</div><div class="t">${g.caption}</div></div>`;
+    d.onclick=()=>openLb(i);
+    grid.appendChild(d);
+  });
+}
+document.getElementById('filters').addEventListener('click',e=>{
+  if(e.target.tagName!=='BUTTON')return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  render(e.target.dataset.f);
+});
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+function openLb(i){current=i;lbimg.src=filtered[i].file;lb.classList.add('open');}
+function move(n){current=(current+n+filtered.length)%filtered.length;lbimg.src=filtered[current].file;}
+document.getElementById('lbx').onclick=()=>lb.classList.remove('open');
+document.getElementById('lbnext').onclick=()=>move(1);
+document.getElementById('lbprev').onclick=()=>move(-1);
+lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open');};
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')lb.classList.remove('open');
+  if(e.key==='ArrowRight')move(1);
+  if(e.key==='ArrowLeft')move(-1);
+});
+</script>
+</body>
+</html>
